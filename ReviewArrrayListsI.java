@@ -3,7 +3,7 @@ package com.mycompany.reviewarrraylistsi;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
 
 public class ReviewArrrayListsI {
 
@@ -11,11 +11,21 @@ public class ReviewArrrayListsI {
         List<Person> list = new ArrayList<Person>();
         /*list.add(new Person());
         list.add(new Person());*/
-        
+        list.add(new Person());
+        Scanner keyboardString = new Scanner(System.in);
+         System.out.println("Would you like to regist one more person? Write Yes to continue and Not to Finish ");
+         String answer = keyboardString.nextLine();
         //for test
-        for (int i=0; i<3; i++){
+        if(!answer.equalsIgnoreCase("no")){
+            for(int i=0; i<list.size(); i++){
             list.add(new Person());
+            System.out.println("Would you like to regist one more person? Write Yes to continue and Not to Finisho ");
+            answer = keyboardString.nextLine();
+            }
+            
+            
         }
+        
         
         
         //index roaming
